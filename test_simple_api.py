@@ -12,7 +12,7 @@ class SimpleApiTestCase(unittest.TestCase):
         self.assertIn("random_number", response.json)
         self.assertIsInstance(response.json["random_number"], int)
         self.assertGreaterEqual(response.json["random_number"], 1)
-        self.assertLessEqual(response.json["random_number"], 100)
+        self.assertLessEqual(response.json["random_number"], 50)
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,7 +9,10 @@ class SimpleApiTestCase(unittest.TestCase):
     def test_fixed_value(self):
         response = self.app.get('/api/fixed')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"message": "This is a fixed response!!"})
+        self.assertIn("random_number", response.json)
+        self.assertIsInstance(response.json["random_number"], int)
+        self.assertGreaterEqual(response.json["random_number"], 1)
+        self.assertLessEqual(response.json["random_number"], 100)
 
 if __name__ == '__main__':
     unittest.main()

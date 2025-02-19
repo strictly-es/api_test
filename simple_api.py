@@ -19,5 +19,9 @@ def hash_string():
     hashed_value = hashlib.sha256(input_string.encode()).hexdigest()
     return jsonify({"hashed_value": hashed_value})
 
+@app.route('/api/hello', methods=['GET'])
+def hello_world():
+    return jsonify({"message": "Hello, World!"})
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -9,7 +9,7 @@ class HelloWorldApiTestCase(unittest.TestCase):
     def test_hello_world(self):
         response = self.app.get('/api/hello')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"message": "Hello, World!"})
+        self.assertEqual(response.json, {"message": "Hello, Codex!"})
 
 if __name__ == '__main__':
     unittest.main()

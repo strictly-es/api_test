@@ -21,7 +21,7 @@ def hash_string():
 
 @app.route('/api/hello', methods=['GET'])
 def hello_world():
-    return jsonify({"message": "Hello, World!"})
+    return jsonify({"message": "Hello, Codex!"})
 
 if __name__ == '__main__':
     app.run(debug=True)
